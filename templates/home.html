@@ -1,0 +1,16 @@
+
+{% extends 'base.html' %}
+{% block title %}Home|AlpaURL{% endblock title %}
+
+{% block body %}
+
+<h1>URL Shortner</h1>
+    <div>
+        <form method="post" action="create">
+            {% csrf_token %}
+            <input type="text" name="long_url">
+            <input type="submit">
+        </form>
+    </div>
+
+{% endblock body %}
